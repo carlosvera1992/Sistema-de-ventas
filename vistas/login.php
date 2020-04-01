@@ -1,3 +1,15 @@
+<?php
+$alert = '';
+if(!empty($_POST)){
+ echo $alert = "Click";
+}
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -34,7 +46,8 @@
         <div class="container" >
             <div class="row justify-content-center mt-5 border row-background" >
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <form action="validar.php" method="POST" class="font-weight-bold was-validated">
+                
+                    <form action="" method="POST" class="font-weight-bold was-validated">
                         <div class="form group text-center ">
                             <h3 class="font-weight-bold">Login</h3><br>
                             <img src="../img/avatar.png" alt="70" width="140"><br>
