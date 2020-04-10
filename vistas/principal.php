@@ -106,7 +106,7 @@
         <!--Fila donde se encuentra el iframe donde se cargaran todas las pestañas de la navbar-->
         <div class="row" style="background-color:;">
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 m-2">
-                <iframe name="myframe" style="height:100%; width:100%; "></iframe>
+                <iframe name="myframe" style="height:100%; width:100%; border:none;"></iframe>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 m-2">

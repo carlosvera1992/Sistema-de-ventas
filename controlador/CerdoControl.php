@@ -49,20 +49,17 @@ class CerdoControl {
   }
   
   
-  public function agregar($cliente) {
+  public function agregar($cerdo) {
     try {
-      $sql = "insert into cliente (idcliente, nombre1, nombre2, apellido1, apellido2, telefono, idciudad, direccion, correo, activo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      $sql = "insert into cerdo (codcerdo, fechanacimiento, sexo, estado, precio, codcorral) values ( ?, ?, ?, ?, ?, ?)";
       $this->pdo->prepare($sql)->execute(array(
-          $cliente->getIdcliente(),
-          $cliente->getNombre1(),
-          $cliente->getNombre2(),
-          $cliente->getApellido1(),
-          $cliente->getApellido2(),
-          $cliente->getTelefono(),
-          $cliente->getIdciudad(),
-          $cliente->getDireccion(),
-          $cliente->getCorreo(),
-          $cliente->getActivo()
+          $cerdo->getCodcerdo(),
+          $cerdo->getFechanac(),
+          $cerdo->getSexo(),
+          $cerdo->getEstado(),
+          $cerdo->getPrecio(),
+          $cerdo->getCodcorral()
+         
       ));
     } catch (Exception $ex) {
       die($ex->getMessage());
@@ -70,61 +67,56 @@ class CerdoControl {
   }
   
    
-  public function obtenerPorId($idcliente) {
-      $ciudadControl = new CiudadControl();
+  public function obtenerPorId($codcerdo) {
+      $corralControl = new CorralControl();
     try {
-      $sql = "select * from cliente where idcliente = ?";
+      $sql = "select * from cerdo where codcerdo = ?";
       $prep = $this->pdo->prepare($sql);
-      $prep->execute(array($idcliente));
-      $client = $prep->fetch(PDO::FETCH_OBJ);
+      $prep->execute(array($codcerdo));
+      $cerd = $prep->fetch(PDO::FETCH_OBJ);
     
-      $cliente = new Cliente();
-      $cliente->setIdcliente($client->idcliente);
-      $cliente->setNombre1($client->nombre1);
-      $cliente->setNombre2($client->nombre2);
-      $cliente->setApellido1($client->apellido1);
-      $cliente->setApellido2($client->apellido2);
-      $cliente->setTelefono($client->telefono);
-      $cliente->setIdciudad($client->idciudad);
-      $cliente->setDireccion($client->direccion);
-      $cliente->setCorreo($client->correo);
-      $cliente->setActivo($client->activo);
-      $cliente->setCiudad($ciudadControl->obtenerPorId($client->idciudad));
+      $cerdo = new Cerdo();
+      $cerdo->setCodcerdo($cerd->codcerdo);
+      $cerdo->setFechanac($cerd->fechanacimiento);
+      $cerdo->setSexo($cerd->sexo);
+      $cerdo->setEstado($cerd->estado);
+      $cerdo->setPrecio($cerd->precio);
+      $cerdo->setCodcorral($cerd->codcorral);
+      $cerdo->setCorral($corralControl->obtenerPorCodigo($cerd->codcorral));
      
-      return $cliente;
+      return $cerdo;
     } catch (Exception $ex) {
       die($ex->getMessage());
     }
   }
   
   
-  public function modificar($cliente) {
+  public  function modificar($cerdo) {
      
     try {
-      $sql = "update cliente set nombre1 = ?, nombre2 = ?, apellido1 = ?, apellido2 = ?, telefono = ?, idciudad = ?, direccion = ?, correo = ?, activo = ?  where idcliente = ?";
+      $sql = "update cerdo set fechanacimiento = ?, sexo = ?, estado = ?, precio = ?, codcorral = ? where codcerdo = ?";
       $this->pdo->prepare($sql)->execute(array(
-          $cliente->getNombre1(),
-          $cliente->getNombre2(),
-          $cliente->getApellido1(),
-          $cliente->getApellido2(),
-          $cliente->getTelefono(),
-          $cliente->getIdciudad(),
-          $cliente->getDireccion(),
-          $cliente->getCorreo(),
-          $cliente->getActivo(),
-          $cliente->getIdcliente()
+          $cerdo->getFechanac(),
+          $cerdo->getSexo(),
+          $cerdo->getEstado(),
+          $cerdo->getPrecio(),
+          $cerdo->getCodcorral(),
+          $cerdo->getCodcerdo()
+         
       ));
     } catch (Exception $ex) {
       die($ex->getMessage());
+    
     }
+    
   }
   
    
-  public function eliminar($idcliente) {
+  public function eliminar($codcerdo) {
     try {
-      $sql = "delete from cliente where idcliente = ?";
+      $sql = "delete from cerdo where codcerdo = ?";
       $prep = $this->pdo->prepare($sql);
-      $prep->execute(array($idcliente));
+      $prep->execute(array($codcerdo));
     } catch (Exception $ex) {
       die($ex->getMessage());
     }
