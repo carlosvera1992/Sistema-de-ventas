@@ -60,10 +60,14 @@ class CerdoControl {
           $cerdo->getPrecio(),
           $cerdo->getCodcorral()
          
+         
+
       ));
     } catch (Exception $ex) {
+      echo 'No Agregado correctamente';
       die($ex->getMessage());
     }
+    echo 'Agregado correctamente';
   }
   
    

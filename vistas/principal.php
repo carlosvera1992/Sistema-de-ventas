@@ -8,7 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="../bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../bootstrap-social/assets/css/font-awesome.css">
+
 
     <title>Sistema Granja</title>
 
@@ -70,7 +72,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Mantenimiento
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item " href="#">Area</a>
                                     <a class="dropdown-item" href="#">Corral</a>
                                     <div class="dropdown-divider"></div>
@@ -106,13 +108,27 @@
         <!--Fila donde se encuentra el iframe donde se cargaran todas las pestañas de la navbar-->
         <div class="row" style="background-color:;">
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 m-2">
-                <iframe name="myframe" style="height:100%; width:100%; border:none;"></iframe>
+                <iframe src="" name="myframe" style="height:100%; width:100%; border:none;">
+                </iframe>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 m-2">
-                <div class="p-2">
-                    <button type="button" class="btn btn-secondary btn btn-block  font-weight-bold">Informes</button>
+                <div class="dropdown p-2">
+                    <button style="border: none;" class="btn btn-info btn btn-block dropdown-toggle font-weight-bold "
+                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Informes
+                    </button>
+                    <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
 
+                        <a class="dropdown-item" target="_blank" href="../informes/pdf/"><img src="../img/pdf.jpg"
+                                alt="40" width="40"></a>
+                        <a class="dropdown-item" href="../informes/cerdosExcel.php"><img src="../img/excel.jpg" alt="40"
+                                width="40"></a>
+                        <a class="dropdown-item" href="../informes/cerdosWord.php"><img src="../img/word.jpg" alt="40"
+                                width="40"></a>
+
+                    </div>
                 </div>
 
                 <div class="p-2">
@@ -177,37 +193,34 @@
 
     </div>
 
+    </footer>
     <!-- Footer -->
-    <footer class="page-footer font-small special-color-dark pt-4 " style="background-color:#FFDEAD;">
+    <footer class="page-footer font-large pt-4 bg-dark" style="">
 
         <!-- Footer Elements -->
         <div class="container">
 
             <!-- Social buttons -->
             <ul class="list-unstyled list-inline text-center">
+
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-fb mx-1">
-                        <i class="fab fa-facebook-f"> </i>
+                    <a class="btn btn-social-icon btn-facebook">
+                        <span class="fa fa-facebook"></span>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-tw mx-1">
-                        <i class="fab fa-twitter"> </i>
+                    <a class="btn btn-social-icon btn-twitter">
+                        <span class="fa fa-twitter"></span>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-gplus mx-1">
-                        <i class="fab fa-google-plus-g"> </i>
+                    <a class="btn btn-social-icon btn-instagram">
+                        <span class="fa fa-instagram"></span>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="btn-floating btn-li mx-1">
-                        <i class="fab fa-linkedin-in"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-dribbble mx-1">
-                        <i class="fab fa-dribbble"> </i>
+                    <a class="btn btn-social-icon btn-google">
+                        <span class="fa fa-google"></span>
                     </a>
                 </li>
             </ul>
@@ -217,13 +230,13 @@
         <!-- Footer Elements -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright
+        <div class="footer-copyright text-center  bg-light">© 2020 Copyright:
+            <a class="btn" href=""> Carlos Vera</a>
         </div>
         <!-- Copyright -->
 
     </footer>
     <!-- Footer -->
-
 
 
 

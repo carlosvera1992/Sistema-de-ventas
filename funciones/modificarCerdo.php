@@ -13,7 +13,7 @@
   $cerdoControl = new CerdoControl();
   $cerdoControl->modificar($cerdo);
 
- 
+  header('Location: ../vistas/cerdoListar.php');
   
   ?>
 

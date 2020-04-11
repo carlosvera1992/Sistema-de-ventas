@@ -41,8 +41,9 @@ $corralControl = new CorralControl();
     <div class="">
         <div class="row">
             <div class="col">
-                <table class="table table-striped">
                 <a href="cerdoAgregar.php" class="btn btn-success" target="myframe">Agregar</a>
+                <table class="table table-striped">
+
                     <caption>Listado De Cerdos</caption>
                     <thead class="thead-dark">
                         <tr>
@@ -68,8 +69,10 @@ $corralControl = new CorralControl();
 
                             <td>
                                 <div>
-                                    <a href="cerdoModificar.php?codigo=<?php echo $cer->getCodcerdo(); ?>" target="myframe" class="btn btn-info">Modificar</a>
-                                    <a href="../funciones/eliminarCerdo.php?codigo=<?php echo $cer->getCodcerdo(); ?>" class="btn btn-danger">Eliminar</a>
+                                    <a href="cerdoModificar.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
+                                        target="myframe" class="btn btn-info">Modificar</a>
+                                    <a href="../funciones/eliminarCerdo.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
+                                        class="btn btn-danger">Eliminar</a>
                                 </div>
 
                             </td>
