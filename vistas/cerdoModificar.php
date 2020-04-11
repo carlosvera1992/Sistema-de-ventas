@@ -39,11 +39,11 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center row-background">
-            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6 col-xl-8">
 
-                <form action="../funciones/modificarCerdo.php" method="GET" class="font-weight-bold was-validated">
+                <form action="../funciones/modificarCerdo.php" method="POST" class="font-weight-bold was-validated">
                     <div class="form group text-center ">
                         <h3 class="font-weight-bold">Modificar Cerdo</h3><br>
 
@@ -52,7 +52,7 @@
                         <label for="codigo">Código:</label>
                         <input type="text" class="form-control" id="codigo" name="codigo" readonly placeholder="Ingrese Código"
                             required value="
-                        <?php echo $cerdo->getCodcerdo(); ?>">
+                        <?php echo $cerdo->getCodcerdo();?>">
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Campo obligatorio.</div>
                     </div>
@@ -67,7 +67,7 @@
                     <p>Sexo:</p>
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="sexo" id="macho"
-                            value="<?php echo $cerdo->getSexo(); ?>"
+                            value="macho"
                             <?php echo ($cerdo->getSexo() == "macho" ? "checked" : ""); ?>>
                         <label class="form-check-label" for="macho">
                             Macho
@@ -76,7 +76,7 @@
 
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="sexo" id="hembra"
-                            value="<?php echo $cerdo->getSexo(); ?>"
+                            value="hembra"
                             <?php echo ($cerdo->getSexo() == "hembra" ? "checked" : ""); ?>>
                         <label class="form-check-label" for="hembra">
                             Hembra
@@ -87,13 +87,13 @@
                         <label for="estado">Estado:</label>
                         <select class="form-control" id="estado" name="estado" value="">
 
-                            <option value="<?php echo $cerdo->getEstado(); ?> "
+                            <option value="vivo"
                                 <?php echo ($cerdo->getEstado() == "vivo" ? "selected" : "")?>>Vivo</option>
 
-                            <option value="<?php echo $cerdo->getEstado(); ?> "
+                            <option value="muerto"
                                 <?php echo ($cerdo->getEstado() == "muerto" ? "selected" : "")?>>Muerto</option>
 
-                            <option value="<?php echo $cerdo->getEstado(); ?> "
+                            <option value="momia"
                                 <?php echo ($cerdo->getEstado() == "momia" ? "selected" : "")?>>Momia</option>
 
                         </select>

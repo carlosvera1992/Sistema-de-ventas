@@ -34,9 +34,9 @@ $corralControl = new CorralControl();
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center row-background">
-            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6 col-xl-8">
 
                 <form action="../funciones/agregarCerdo.php" method="POST" class="font-weight-bold was-validated">
                     <div class="form group text-center ">
