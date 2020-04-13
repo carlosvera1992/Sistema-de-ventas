@@ -31,7 +31,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-image: url(../img/fondoP.jpg)">
         <!--Fila donde se encuentra la navbar-->
 
         <div class="row">
@@ -108,7 +108,7 @@
         <!--Fila donde se encuentra el iframe donde se cargaran todas las pestañas de la navbar-->
         <div class="row" style="background-color:;">
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 m-2">
-                <iframe src="" name="myframe" style="height:100%; width:100%; border:none;">
+                <iframe class="" src="" name="myframe" style="height:100%; width:100%; border:none; background-color:;">
                 </iframe>
             </div>
 
