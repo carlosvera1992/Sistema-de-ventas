@@ -1,4 +1,11 @@
 <?php
+session_start();
+$varSesion = $_SESSION['usuario'];
+
+if($varSesion == null || $varSesion = ''){
+    header("location: ../index.php");
+    die();
+}
 require_once '../controlador/CorralControl.php';
 $corralControl = new CorralControl();
 ?>
@@ -38,7 +45,7 @@ $corralControl = new CorralControl();
         <div class="row justify-content-center row-background">
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6 col-xl-8">
 
-                <form action="../funciones/agregarCerdo.php" method="POST" class="font-weight-bold was-validated">
+                <form action="../funciones/agregarCerdo.php" method="POST" class="mt-4 font-weight-bold was-validated">
                     <div class="form group text-center ">
                         <h3 class="font-weight-bold">Agregar Cerdo</h3><br>
 

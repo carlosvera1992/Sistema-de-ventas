@@ -1,0 +1,54 @@
+body{
+    background-image: url(../img/fondoP.jpg);
+}
+
+#iframe{
+    height: 100%;
+    width: 100%;
+    border: none;
+     
+ }
+
+ #navbarSupportedContent > ul > li >a{
+    margin-left: 10px;
+    border: none;
+    /* font-weight: bold; */
+    font-size: 18px;
+    
+ }
+
+ #divInformes img{
+    width: 35px;
+ }
+
+ #divInformes {
+    background-color: #ccc ;
+ }
+
+ #linkConsulta a{
+    color: white;
+    font-weight: bold;
+ }
+
+ #linkConsulta {
+    background-color: #ccc;
+    font-weight: bold;
+ }
+
+ #linkConsulta a:hover{
+    color: #555;
+ }
+
+ .user{
+    background: #ccc;
+ }
+
+ /* Carrousel */
+ #demo img{
+    height: 200px;
+ }
+ 
+ /* Login */
+ #bodyLogin{
+    background: #ccc;
+ }

@@ -1,4 +1,11 @@
 <?php
+    session_start();
+    $varSesion = $_SESSION['usuario'];
+
+    if($varSesion == null || $varSesion = ''){
+        header("location: ../index.php");
+        die();
+    }
     require_once '../controlador/CerdoControl.php';
     $cerdoControl = new CerdoControl();
     $cerdo = $cerdoControl->obtenerPorId($_REQUEST['codigo']);

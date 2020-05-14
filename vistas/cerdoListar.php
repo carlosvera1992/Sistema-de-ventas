@@ -1,4 +1,12 @@
 <?php
+ session_start();
+ $varSesion = $_SESSION['usuario'];
+
+ if($varSesion == null || $varSesion = ''){
+     header("location: ../index.php");
+     die();
+ }
+ 
 require_once '../controlador/CerdoControl.php';
 $cerdoControl = new CerdoControl();
 require_once '../controlador/CorralControl.php';
@@ -41,7 +49,8 @@ $corralControl = new CorralControl();
     <div class="">
         <div class="row">
             <div class="col">
-                <a href="cerdoAgregar.php" class="btn btn-success" target="myframe">Agregar</a>
+                <a href="cerdoAgregar.php" class="btn btn-success" target="myframe"
+                    style="margin:8px; float:right;">Agregar</a>
                 <table class="table table-striped">
 
                     <caption>Listado De Cerdos</caption>
