@@ -35,6 +35,7 @@
         header('Location: ../vistas/principal.php');
 
         }else{
-        header('Location: ../index.php');
+            print "<script>alert(\"Usuario y/o contraseña incorrectos.\");window.location='../index.php';</script>";
+            //header('Location: ../index.php');
         }
  ?>

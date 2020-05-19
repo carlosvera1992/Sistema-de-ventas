@@ -52,3 +52,22 @@ body{
  #bodyLogin{
     background: #ccc;
  }
+
+ /* Registro de usuario */
+ #registroU  img{
+   width: 128px;
+   height: 40px;
+   display: block;
+   float: right;
+   background: #2ca0a0;
+   margin-top: 9px;
+ }
+
+ h1{
+   font-size: 29px;
+   font-family: verdana;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 50px;
+   
+ }

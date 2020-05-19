@@ -37,7 +37,7 @@
 
                     <div class="form-group">
                         <label for="usuario">Usuario</label>
-                        <input type="email" class="form-control" id="usuario" name="usuario"
+                        <input type="text" class="form-control" id="usuario" name="usuario"
                             placeholder="Ingrese usuario" required>
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Por favor llene este campo.</div>
@@ -53,7 +53,9 @@
 
                     <button type="submit" class="btn btn-info btn btn-block font-weight-bold">Ingresar</button>
                 </form>
-            
+                <a id="registroU" class="registroU" href="vistas/registrarUsuario.php">
+                    <img src="img/registrate.png" alt="registrate">
+                </a>
             </div>
         </div>
 
