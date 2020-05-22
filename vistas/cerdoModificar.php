@@ -116,9 +116,9 @@
                         <label for="corral">Corral:</label>
                         <select class="form-control" id="corral" name="corral" value="">
                             <?php foreach ($corralControl->obtenerTodos() as $cor) { ?>
-                            <option value="<?php echo $cor->codcorral; ?>"
-                                <?php echo ($cerdo->getCodcorral() == $cor->codcorral ? "selected" : "")?>>
-                                <?php echo $cor->nombre; ?>
+                            <option value="<?php echo $cor->getCodcorral(); ?>"
+                                <?php echo ($cerdo->getCodcorral() == $cor->getCodcorral() ? "selected" : "")?>>
+                                <?php echo $cor->getNombre(); ?>
                             </option>
                             <?php }?>
 

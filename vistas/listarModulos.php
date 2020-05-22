@@ -1,16 +1,14 @@
 <?php
- session_start();
- $varSesion = $_SESSION['usuario'];
+session_start();
+$varSesion = $_SESSION['usuario'];
 
- if($varSesion == null || $varSesion = ''){
-     header("location: ../index.php");
-     die();
- }
- 
-require_once '../controlador/CerdoControl.php';
-$cerdoControl = new CerdoControl();
-require_once '../controlador/CorralControl.php';
-$corralControl = new CorralControl();
+if($varSesion == null || $varSesion = ''){
+    header("location: ../index.php");
+    die();
+}
+
+require_once '../controlador/ModuloControl.php';
+$moduloControl = new ModuloControl();
 ?>
 
 
@@ -49,38 +47,34 @@ $corralControl = new CorralControl();
     <div class="">
         <div class="row">
             <div class="col">
-                <a href="cerdoAgregar.php" class="btn btn-success" target="myframe"
+                <a href="moduloAgregar.php" class="btn btn-success" target="myframe"
                     style="margin:8px; float:right;">Agregar</a>
                 <table class="table table-striped">
 
-                    <caption>Listado De Cerdos</caption>
+                    <caption>Listado De Módulos</caption>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Código</th>
-                            <th scope="col">Fecha Nacimiento</th>
-                            <th scope="col">Sexo</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Corral</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Capacidad</th>
+                            <th scope="col">Area</th>
                             <th scope="col">Acciones</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($cerdoControl->obtenerTodos() as $cer) { ?>
+                        <?php foreach ($moduloControl->obtenerTodos() as $mod) { ?>
                         <tr>
-                            <th><?php echo $cer->getCodcerdo(); ?></th>
-                            <td><?php echo $cer->getFechanac(); ?></td>
-                            <td><?php echo $cer->getSexo(); ?></td>
-                            <td><?php echo $cer->getEstado(); ?></td>
-                            <td><?php echo $cer->getPrecio(); ?></td>
-                            <td><?php echo $cer->getCorral()->getNombre(); ?></td>
-
+                            <th><?php echo $mod->getCodModulo(); ?></th>
+                            <td><?php echo $mod->getNombre(); ?></td>
+                            <td><?php echo $mod->getCapacidad(); ?></td>
+                            <td><?php echo $mod->getArea()->getNombre(); ?></td>
+                        
                             <td>
                                 <div>
-                                    <a href="cerdoModificar.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
-                                        target="myframe" class="btn btn-info">Modificar</a>
-                                    <a href="../funciones/eliminarCerdo.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
+                                    <a href="moduloModificar.php?codigo=<?php echo $mod->getCodModulo(); ?>"
+                                       class="btn btn-info">Modificar</a>
+                                    <a href="../funciones/eliminarModulo.php?codigo=<?php echo $mod->getCodModulo(); ?>"
                                         class="btn btn-danger">Eliminar</a>
                                 </div>
 

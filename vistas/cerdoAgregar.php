@@ -102,7 +102,7 @@ $corralControl = new CorralControl();
                         <select class="form-control" id="corral" name="corral">
                             <option>Seleccione...</option>
                             <?php foreach ($corralControl->obtenerTodos() as $cor) {?>
-                            <option value="<?php echo $cor->codcorral?>"><?php echo $cor->nombre?></option>
+                            <option value="<?php echo $cor->getCodcorral()?>"><?php echo $cor->getNombre()?></option>
                             <?php }?>
                             
                         </select>

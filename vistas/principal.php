@@ -83,9 +83,9 @@
                                 </a>
                                 <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item " href="../vistas/listarAreas.php" target="myframe">Area</a>
-                                    <a class="dropdown-item" href="#">Corral</a>
+                                    <a class="dropdown-item" href="../vistas/listarCorrales.php">Corral</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Módulo</a>
+                                    <a class="dropdown-item" href="../vistas/listarModulos.php" target="myframe">Módulo</a>
                                 </div>
                             </li>
 

@@ -25,7 +25,7 @@ class CerdoControl {
       $prep = $this->pdo->prepare($sql);
       $prep->execute();
       
-      //se realiza este codigo para obtener el obejeto cerdo con la realacion de la tabla ciudad
+      //se realiza este codigo para obtener el obejeto cerdo con la realacion de la tabla corral
       $cerdos = [];
       foreach($prep->fetchAll(PDO::FETCH_OBJ) as $cer) {
         $cerdo = new Cerdo();
@@ -41,7 +41,7 @@ class CerdoControl {
         array_push($cerdos, $cerdo);
       }
       return $cerdos;
-      
+    
      // return $prep->fetchAll(PDO::FETCH_OBJ);
     } catch (Exception $ex) {
       die($ex->getMessage());

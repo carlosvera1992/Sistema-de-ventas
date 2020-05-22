@@ -7,12 +7,9 @@ if($varSesion == null || $varSesion = ''){
     die();
 }
 
-require_once '../controlador/AreaControl.php';
-    $areaControl = new AreaControl();
-    $area = $areaControl->obtenerPorId($_REQUEST['codigo']);
-    
+require_once '../controlador/ModuloControl.php';
+$moduloControl = new ModuloControl();
 ?>
-
 
 
 <!doctype html>
@@ -49,38 +46,46 @@ require_once '../controlador/AreaControl.php';
         <div class="row justify-content-center row-background">
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6 col-xl-8">
 
-                <form action="../funciones/modificarArea.php" method="POST" class="font-weight-bold was-validated">
+                <form action="../funciones/AgregarCorral.php" method="POST" class="mt-4 font-weight-bold was-validated">
                     <div class="form group text-center ">
-                        <h3 class="font-weight-bold">Modificar Area</h3><br>
-
+                        <h3 class="font-weight-bold">Agregar Corral</h3><br>
                     </div>
 
                     <div class="form-group">
                         <label for="codigo">Código:</label>
-                        <input type="text" class="form-control" id="codigo" name="codigo" readonly placeholder="Ingrese Código"
-                            required value="<?php echo $area->getCodArea();?>">
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese Código" required>
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Campo obligatorio.</div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="Ingrese Nombre"
-                            required value="<?php echo $area->getNombre();?>">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Campo obligatorio.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="capacidad">Capacidad:</label>
+                        <input type="number" class="form-control" id="capacidad" name="capacidad" placeholder="capacidad" required>
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Campo obligatorio.</div>
                     </div>
                     
+                    
                     <div class="form-group">
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" class="form-control" id="descripcion" name="descripcion"  placeholder="Ingrese Descripción"
-                             value="<?php echo $area->getDescripcion();?>">
-                        <div class="valid-feedback">Valido.</div>
-                        <div class="invalid-feedback">Campo obligatorio.</div>
+                        <label for="modulo">Módulo:</label>
+                        <select class="form-control" id="modulo" name="modulo">
+                            <option>Seleccione...</option>
+                            <?php foreach ($moduloControl->obtenerTodos() as $mod) {?>
+                            <option value="<?php echo $mod->getCodModulo()?>"><?php echo $mod->getNombre()?></option>
+                            <?php }?>
+                            
+                        </select>
                     </div>
-                
-                    <button type="submit" class="btn btn-info btn btn-block font-weight-bold"
-                        value="guardar">Guardar</button>
+                    
+                    
+                    <button type="submit" class="btn btn-info btn btn-block font-weight-bold">Registrar</button>
                 </form>
             </div>
         </div>

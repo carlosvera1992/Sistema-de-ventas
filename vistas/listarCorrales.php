@@ -1,14 +1,12 @@
 <?php
- session_start();
- $varSesion = $_SESSION['usuario'];
+session_start();
+$varSesion = $_SESSION['usuario'];
 
- if($varSesion == null || $varSesion = ''){
-     header("location: ../index.php");
-     die();
- }
- 
-require_once '../controlador/CerdoControl.php';
-$cerdoControl = new CerdoControl();
+if($varSesion == null || $varSesion = ''){
+    header("location: ../index.php");
+    die();
+}
+
 require_once '../controlador/CorralControl.php';
 $corralControl = new CorralControl();
 ?>
@@ -49,38 +47,34 @@ $corralControl = new CorralControl();
     <div class="">
         <div class="row">
             <div class="col">
-                <a href="cerdoAgregar.php" class="btn btn-success" target="myframe"
+                <a href="corralAgregar.php" class="btn btn-success" target="myframe"
                     style="margin:8px; float:right;">Agregar</a>
                 <table class="table table-striped">
 
-                    <caption>Listado De Cerdos</caption>
+                    <caption>Listado De Corrales</caption>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Código</th>
-                            <th scope="col">Fecha Nacimiento</th>
-                            <th scope="col">Sexo</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Corral</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Capacidad</th>
+                            <th scope="col">Modulo</th>
                             <th scope="col">Acciones</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($cerdoControl->obtenerTodos() as $cer) { ?>
+                        <?php foreach ($corralControl->obtenerTodos() as $corr) { ?>
                         <tr>
-                            <th><?php echo $cer->getCodcerdo(); ?></th>
-                            <td><?php echo $cer->getFechanac(); ?></td>
-                            <td><?php echo $cer->getSexo(); ?></td>
-                            <td><?php echo $cer->getEstado(); ?></td>
-                            <td><?php echo $cer->getPrecio(); ?></td>
-                            <td><?php echo $cer->getCorral()->getNombre(); ?></td>
-
+                            <th><?php echo $corr->getCodcorral(); ?></th>
+                            <td><?php echo $corr->getNombre(); ?></td>
+                            <td><?php echo $corr->getCapacidad(); ?></td>
+                            <td><?php echo $corr->getModulo()->getNombre(); ?></td>
+                        
                             <td>
                                 <div>
-                                    <a href="cerdoModificar.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
-                                        target="myframe" class="btn btn-info">Modificar</a>
-                                    <a href="../funciones/eliminarCerdo.php?codigo=<?php echo $cer->getCodcerdo(); ?>"
+                                    <a href="corralModificar.php?codigo=<?php echo $corr->getCodcorral();?>"
+                                       class="btn btn-info">Modificar</a>
+                                    <a href="#"
                                         class="btn btn-danger">Eliminar</a>
                                 </div>
 
