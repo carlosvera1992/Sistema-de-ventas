@@ -58,8 +58,7 @@
                     <div class="form-group">
                         <label for="codigo">Código:</label>
                         <input type="text" class="form-control" id="codigo" name="codigo" readonly placeholder="Ingrese Código"
-                            required value="
-                        <?php echo $cerdo->getCodcerdo();?>">
+                            required value="<?php echo $cerdo->getCodcerdo();?>">
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Campo obligatorio.</div>
                     </div>
@@ -74,8 +73,7 @@
                     <p>Sexo:</p>
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="sexo" id="macho"
-                            value="macho"
-                            <?php echo ($cerdo->getSexo() == "macho" ? "checked" : ""); ?>>
+                            value="macho"<?php echo ($cerdo->getSexo() == "macho" ? "checked" : ""); ?>>
                         <label class="form-check-label" for="macho">
                             Macho
                         </label>

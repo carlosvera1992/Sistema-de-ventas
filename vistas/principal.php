@@ -82,7 +82,7 @@
                                     Mantenimiento
                                 </a>
                                 <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item " href="#">Area</a>
+                                    <a class="dropdown-item " href="../vistas/listarAreas.php" target="myframe">Area</a>
                                     <a class="dropdown-item" href="#">Corral</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Módulo</a>
