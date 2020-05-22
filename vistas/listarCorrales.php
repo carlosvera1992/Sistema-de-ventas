@@ -74,7 +74,7 @@ $corralControl = new CorralControl();
                                 <div>
                                     <a href="corralModificar.php?codigo=<?php echo $corr->getCodcorral();?>"
                                        class="btn btn-info">Modificar</a>
-                                    <a href="#"
+                                    <a href="../funciones/eliminarCorral.php?codigo=<?php echo $corr->getCodcorral();?>"
                                         class="btn btn-danger">Eliminar</a>
                                 </div>
 

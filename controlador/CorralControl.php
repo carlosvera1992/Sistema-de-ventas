@@ -36,7 +36,6 @@ class CorralControl {
         array_push($corrales, $corral);
       
       }
-      echo 'Corrales encontrados';
       return $corrales;
 
     } catch (Exception $ex) {
@@ -105,6 +104,17 @@ class CorralControl {
     
     }
     echo 'Modififcado correctamente';
+  }
+
+  public function eliminar($codCorral) {
+    try {
+      $sql = "delete from corral where codcorral = ?";
+      $prep = $this->pdo->prepare($sql);
+      $prep->execute(array($codCorral));
+      echo 'Corral Eliminado';
+    } catch (Exception $ex) {
+      die($ex->getMessage());
+    }
   }
 
 }

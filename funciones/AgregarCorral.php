@@ -18,6 +18,4 @@
     $corralControl->modificar($corral);
   }
 
-
-
-//header('Location: ../vistas/cerdoListar.php');
+header('Location: ../vistas/listarCorrales.php');

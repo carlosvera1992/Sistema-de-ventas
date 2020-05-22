@@ -81,9 +81,9 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Mantenimiento
                                 </a>
-                                <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu text-center user" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item " href="../vistas/listarAreas.php" target="myframe">Area</a>
-                                    <a class="dropdown-item" href="../vistas/listarCorrales.php">Corral</a>
+                                    <a class="dropdown-item" href="../vistas/listarCorrales.php" target="myframe">Corral</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="../vistas/listarModulos.php" target="myframe">Módulo</a>
                                 </div>
@@ -144,6 +144,7 @@
                                 alt="40"></a>
 
                     </div>
+                    
                 </div>
 
                 <div class="dropdown p-2 mb-2">

@@ -50,7 +50,7 @@
         <div class="row justify-content-center row-background">
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6 col-xl-8">
 
-                <form action="../funciones/agregarcorral.php" method="POST" class="font-weight-bold was-validated">
+                <form action="../funciones/agregarcorral.php" method="GET" class="font-weight-bold was-validated">
                     <div class="form group text-center ">
                         <h3 class="font-weight-bold">Modificar Corral</h3><br>
 
@@ -83,7 +83,7 @@
                         <label for="area">Módulo:</label>
                         <select class="form-control" id="modulo" name="modulo" value="">
                             <?php foreach ($moduloControl->obtenerTodos() as $mod) { ?>
-                            <option value="<?php echo $mod->codmodulo; ?>"
+                            <option value="<?php echo $mod->getCodModulo(); ?>"
                                 <?php echo ($corral->getCodmodulo() == $mod->getCodModulo() ? "selected" : "")?>>
                                 <?php echo $mod->getNombre(); ?>
                             </option>
