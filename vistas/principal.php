@@ -46,9 +46,11 @@
 
     <div class="container-fluid">
         <!--Fila donde se encuentra la navbar-->
-
+        
         <div class="row">
+            
             <div class="col m-2">
+                
                 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
                     <a style="color:white; font-weight: bold"   class="navbar-brand" href="#"><img src="../img/logoheader.png" style="width:55px;"> Farm Pig</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,13 +58,14 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="btn btn-outline-light" href="../vistas/principal.php">Home </a>
                             </li>
                             <li class="nav-item">
+                                
                                 <a class="btn btn-outline-light" href="../vistas/cerdoListar.php"
                                     target="myframe">Cerdo</a>
                             </li>
@@ -133,7 +136,7 @@
                         Informes
                     </button>
                     <div id="divInformes" class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-
+                        
                         <a class="dropdown-item" target="_blank" href="../informes/pdf/"><img src="../img/pdf.jpg"
                                 alt="40"></a>
 
@@ -146,6 +149,7 @@
                     </div>
                     
                 </div>
+                
 
                 <div class="dropdown p-2 mb-2">
                     <button style="border: none;"
@@ -196,12 +200,12 @@
 
 
                 <div class="card m-2" style="width:300px">
-                    <img class="card-img-top" src="../img/carlos.png " alt="Card image"
-                        style="width:100%; height:250px;">
+                    <!-- <img class="card-img-top" src="../img/carlos.png " alt="Card image"
+                        style="width:100%; height:250px;"> -->
                     <div class="card-body " style="background-color: #7FFFD4;">
                         <h4 class="card-title">Carlos Vera</h4>
-                        <p class="card-text font-weight-bold">Soy estudiante de desarrollo de software en la
-                            Uniremington</p>
+                        <p class="card-text font-weight-bold">Estudiante de desarrollo de software en la
+                            Uniremington, cursando sexto semestre</p>
                         <a href="#" class="btn btn-success">Ver Perfil</a>
                     </div>
                 </div>

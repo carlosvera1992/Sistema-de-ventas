@@ -12,12 +12,12 @@ $resultado = mysqli_query($mysqli, $consulta);
 </div>
 <table border="1">
     <tr>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> FECHA NACIMIENTO </th>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> CODIGO </th>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> SEXO </th>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> ESTADO </th>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> PRECIO </th>
-        <th style="background-color:#00BFFF; color:#fff; text-align:center;"> COD. CORRAL </th>      
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> CODIGO </th>
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> FECHA NACIMIENTO </th>
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> SEXO </th>
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> ESTADO </th>
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> PRECIO </th>
+        <th style="background-color:#EEE8AA; color:#000000; text-align:center;"> COD. CORRAL </th>      
        
     </tr>
 
